@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+  /* border: 1px solid red; */
+}
+
+.container {
+  width: 90%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.counter-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.counter-title {
+  border: 2px solid orange;
+  width: fit-content;
+  margin: auto;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: gray;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 5px 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-green {
+  background-color: #1bb61bd8;
+}
+
+.btn-green:hover {
+  background-color: #248024d8;
+}
+
+.btn-blue {
+  background-color: #2874f0dd;
+}
+.btn-blue:hover {
+  background-color: #0e3d88dd;
+}
+
+.btn-red {
+  background-color: #df2828dd;
+}
+
+.btn-red:hover {
+  background-color: #891717dd;
+}
+
+/* -----------------> */
+.heading {
+  text-align: center;
+  color: orange;
+  margin-top: 10px;
+}
+
+.title {
+  text-align: center;
+  margin: 10px 0;
+  color: #466b0e;
+}
+
+.fallback {
+  text-align: center;
+  color: red;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.common {
+  gap: 1rem;
+  padding: 10px;
+}
+
+.users-container,
+.todos-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.comments-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 20px;
+}
+
+.box {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.user-box {
+  border: 2px solid gray;
+}
+
+.todo-box {
+  border: 2px solid palegreen;
+}
+
+.comment-info {
+  border: 2px solid burlywood;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+
+  .users-container,
+  .todos-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .users-container,
+  .todos-container,
+  .comments-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .users-container,
+  .todos-container,
+  .comments-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+}
